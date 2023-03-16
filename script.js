@@ -7,19 +7,24 @@ const toggleCanvas = document.querySelector(".toggleCanvas");
 
 toggleCanvas.addEventListener("click", ()=>{
     container.classList.toggle("rainbow-bg");
-    toggleCanvas.innerHTML="There are no mistakes, just happy accidents. <br> -Bob Ross";
+  
 });
 
 
-
-
-
-
-
 const reset = document.querySelector(".resetButton");
+
 reset.addEventListener("click",()=>{
- container.innerHTML ="";
-makeGrid(currentDim)})
+reset.innerHTML="";
+reset.innerHTML="There are no mistakes, just happy accidents. <br> -Bob Ross";
+container.innerHTML ="";
+makeGrid(currentDim)
+setTimeout(() => {reset.innerHTML="reset canvas";}, 5000);
+//setTimeout(()=>{},5000);
+
+
+})
+
+
 
 let currentDim= 16;
 
